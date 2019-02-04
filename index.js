@@ -110,10 +110,18 @@ email.addEventListener("input", function(event) {
 });
 
 const mostrarVentana = function(event) {
+  event.preventDefault();
   var ventana = document.getElementById("bgventana");
   ventana.style.display = "block";
 };
+
+let openModal = document.getElementById("openModal");
+openModal.addEventListener("click", mostrarVentana);
+
 const ocultarVentana = function(event) {
   var ventana = document.getElementById("bgventana");
   ventana.style.display = "none";
 };
+
+let closeModal = document.getElementById("closeModal");
+closeModal.addEventListener("click", ocultarVentana);
