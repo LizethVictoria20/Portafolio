@@ -786,6 +786,11 @@ main .profile {
   margin: 0 5px;
   cursor: pointer;
 }
+.works-header ul li button {
+  border: none;
+  margin: 10px;
+  font-size: 15px;
+}
 .works-content {
   display: flex;
   flex-wrap: wrap;
