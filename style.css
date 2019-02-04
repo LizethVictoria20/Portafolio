@@ -928,7 +928,6 @@ main .contact {
     position: relative;
     border-radius: 5px;
     left: -6px;
-    margin: 0 auto;
   }
   header nav {
     display: flex;
@@ -954,7 +953,6 @@ main .contact {
     display: flex;
     margin: 0;
     width: 1020px;
-    margin-left: 500px;
   }
   main .about,
   main .resume,
