@@ -27,32 +27,6 @@ function remove() {
   dowland.classList.remove("selected");
 }
 
-dowland.addEventListener("click", function(e) {
-  if (window.innerWidth > 1040) {
-    e.preventDefault();
-    dowland.style.backgroundColor = "pink"; //Cambiar el color cuando se selecciona
-    dowland.classList.add("selected");
-  } else if (window.innerWidth > 540) {
-    dowland.style.background = "red";
-  } else {
-    dowland.style.background = "pink";
-  }
-});
-
-parrafo.addEventListener("click", function(e) {
-  if (window.innerWidth > 1040) {
-    e.preventDefault();
-    parrafo.style.backgroundColor = "green"; //Cambiar el color cuando se selecciona
-    parrafo.style.color = "yellow";
-    parrafo.classList.add("selected");
-  } else if (window.innerWidth > 540) {
-    parrafo.style.backgroundColor = "pink";
-  } else {
-    parrafo.style.backgroundColor = "yellow";
-    parrafo.style.color = "black";
-  }
-});
-
 getAbout.addEventListener("click", function(e) {
   //window.requestAnimationFrame(function() {
   //about.style.opacity = about.style.opacity + 0.05; //Hacer aniamciones y lo ejecutara a la velocidad 60 veces por segundo
@@ -109,10 +83,21 @@ email.addEventListener("input", function(event) {
   }
 });
 
+// Modal
+// ---------------------------------------------------
+function esHijoDeLineDown(elemento) {
+  if (elemento.tagName === "BODY") return false;
+  if (elemento.tagName === "DIV" && elemento.className === "line-down")
+    return true;
+  return esHijoDeLineDown(elemento.parentElement);
+}
+
 const mostrarVentana = function(event) {
-  event.preventDefault();
-  var ventana = document.getElementById("bgventana");
-  ventana.style.display = "block";
+  if (esHijoDeLineDown(event.target)) {
+    event.preventDefault();
+    var ventana = document.getElementById("bgventana");
+    ventana.style.display = "block";
+  }
 };
 
 let openModal = document.getElementById("openModal");
