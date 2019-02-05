@@ -10,7 +10,6 @@ let contact = document.getElementById("contact");
 let getContact = document.getElementById("getContact");
 let parrafo = document.getElementById("parrafo");
 let dowland = document.getElementById("dowland");
-console.log(getResume);
 
 function remove() {
   about.classList.remove("view");
@@ -153,4 +152,24 @@ function filtrarElementos(event) {
     let valor = elemento.innerText;
     filterCategories(valor.toLowerCase());
   }
+}
+
+//Form
+//-----------------------------------
+
+let formulario = document.getElementById("form");
+formulario.addEventListener("submit", datosFormulario);
+
+function datosFormulario(event) {
+  event.preventDefault();
+  const name = formulario.name.value;
+  const email = formulario.correo.value;
+  const texto = formulario.message.value;
+
+  window.localStorage.setItem("nombre", name);
+  window.localStorage.setItem("correo", email);
+  window.localStorage.setItem("mensaje", texto);
+  formulario.reset();
+
+  alert("Gracias por su mensaje");
 }

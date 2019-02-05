@@ -350,10 +350,12 @@ main .profile {
 }
 .profile-image img {
   position: relative;
-  top: -100px;
-  border-radius: 45%;
+  top: -70px;
+  border-radius: 50%;
   border: 3px solid white;
   width: 130px;
+  height: 130px;
+  object-fit: cover;
 }
 .profile-image::before {
   content: "";
