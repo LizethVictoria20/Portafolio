@@ -110,3 +110,33 @@ const ocultarVentana = function(event) {
 
 let closeModal = document.getElementById("closeModal");
 closeModal.addEventListener("click", ocultarVentana);
+
+//Filtrar Categorias
+// ---------------------------------------------------------------
+
+const filterCategories = function(filterWorksBy) {
+  let works = document.querySelectorAll(".works-content .line-down ");
+  console.log(filterWorksBy);
+  for (let i = 0; i < works.length; i++) {
+    let workItem = works[i];
+    if (filterWorksBy === "all") {
+      workItem.style.display = "block";
+    } else if (workItem.dataset.categorie !== filterWorksBy) {
+      workItem.style.display = "none";
+    } else {
+      workItem.style.display = "block";
+    }
+  }
+};
+
+let filtros = document.getElementById("filtros");
+filtros.addEventListener("click", filtrarElementos);
+
+function filtrarElementos(event) {
+  let elemento = event.target;
+
+  if (elemento.tagName === "BUTTON") {
+    let valor = elemento.innerText;
+    filterCategories(valor.toLowerCase());
+  }
+}
