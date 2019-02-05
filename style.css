@@ -219,10 +219,6 @@ button:focus {
 .line-down {
   position: relative;
 }
-.line-down:hover {
-  background: #ff847d;
-  opacity: 0.7;
-}
 
 .line-down::after {
   content: "";
@@ -824,6 +820,10 @@ main .profile {
   margin: 10px;
   font-size: 15px;
 }
+.works-header ul li button:hover {
+  color: #ff6f91;
+}
+
 .works-content {
   display: flex;
   flex-wrap: wrap;
@@ -1032,6 +1032,10 @@ main .contact {
   main .contact {
     margin-bottom: 0;
   }
+  .ventana {
+    width: min-content;
+    height: 85%;
+  }
 }
 .bgventana {
   position: absolute;
@@ -1053,10 +1057,10 @@ main .contact {
     #ff9671
   );
   width: 500px;
-  height: 500px;
+  height: 365px;
   top: 50%;
   left: 50%;
-  margin-left: 24px;
+  margin-left: 18px;
   margin-top: 23px;
 }
 .buttonClose {
@@ -1071,4 +1075,15 @@ main .contact {
 }
 .description-modal {
   display: none;
+}
+.ventana h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ventana p {
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+.ventana a {
+  font-weight: 400;
 }

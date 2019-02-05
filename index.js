@@ -92,11 +92,26 @@ function esHijoDeLineDown(elemento) {
   return esHijoDeLineDown(elemento.parentElement);
 }
 
+function obtenerLineDownPadre(elemento) {
+  if (elemento.tagName === "BODY") return null;
+  if (elemento.tagName === "DIV" && elemento.className === "line-down")
+    return elemento;
+  return obtenerLineDownPadre(elemento.parentElement);
+}
+
 const mostrarVentana = function(event) {
-  if (esHijoDeLineDown(event.target)) {
+  let target = event.target;
+  if (esHijoDeLineDown(target)) {
     event.preventDefault();
+    // Abre modal
     var ventana = document.getElementById("bgventana");
     ventana.style.display = "block";
+    // Contenido del modal
+    let parentLineDown = obtenerLineDownPadre(target);
+
+    let contenidoModal = parentLineDown.querySelector(".description-modal");
+    let modal = document.getElementById("modal");
+    modal.innerHTML = contenidoModal.innerHTML;
   }
 };
 
@@ -116,7 +131,6 @@ closeModal.addEventListener("click", ocultarVentana);
 
 const filterCategories = function(filterWorksBy) {
   let works = document.querySelectorAll(".works-content .line-down ");
-  console.log(filterWorksBy);
   for (let i = 0; i < works.length; i++) {
     let workItem = works[i];
     if (filterWorksBy === "all") {
