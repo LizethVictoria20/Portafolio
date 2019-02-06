@@ -216,6 +216,19 @@ button:focus {
     rgba(255, 255, 255, 0) 70%
   );
 }
+.line-works::before {
+  content: "";
+  position: absolute;
+  left: 115px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
 .line-down {
   position: relative;
 }
@@ -315,7 +328,6 @@ main .profile {
   overflow: hidden;
 }
 .profile-background {
-  background-image: url("./img/bg.jpg");
   height: 300px;
   background-size: cover;
   background-position: center center;
@@ -474,11 +486,12 @@ main .profile {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  justify-content: center;
 }
 .about-services > div:after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 74%;
   top: 0;
   width: 1px;
   height: 100%;
