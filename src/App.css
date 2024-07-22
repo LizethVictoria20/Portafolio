@@ -3,6 +3,11 @@
   text-align: center;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 500;
-  font-style: normal;
-  
+  font-style: normal; 
 }
+
+.separator {
+  height: 3px;
+  background: #a593d5;
+}
+
