@@ -1,0 +1,16 @@
+.personal-logo img{
+    width: 100%;
+}
+.logo-network img {
+    width: 76%;
+}
+
+
+/* MEDIA QUERY */
+
+/* @media screen and (max-width: 320px) {
+    .logo-network {
+        flex: 1 1 0%;
+        justify-content: end;
+    }
+} */
