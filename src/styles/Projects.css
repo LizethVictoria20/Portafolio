@@ -45,17 +45,18 @@
 article {
 	--active: 0.15;
 	--start: 0;
-	height: 100%;
+	overflow: hidden; /* Asegura que el contenido extra no se desborde */
 	background: #d5cbe3;
 	aspect-ratio: 330 / 400;
 	border-radius: var(--border-radius);
-	min-width: 26%;
-	max-width: 20%;
+	min-width: 335px;
+	max-width: 300px;
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
 	position: relative;
 }
+
 
 article:is(:hover, :focus-visible) {
   z-index: 2;
@@ -142,6 +143,7 @@ article::after {
 	gap: 0.25rem;
 	font-weight: 50;
 	margin: 1rem;
+	max-height: 36px;
 }
 
 a {

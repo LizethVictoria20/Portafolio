@@ -78,7 +78,7 @@ const GlowEffect = () => {
     <div className="container">
     {
       ProjectJSON.map((item) => (
-        <article key={item.id}>
+        <article key={item.id} className="shadow-xl border border-zinc-300 ">
         <div className="glows"></div>
         <div>
           <img src={item.image} alt="" />
@@ -86,8 +86,7 @@ const GlowEffect = () => {
         <h2>{item.projectName}</h2>
         <div className="decription-project px-8">
           <p className="text-xs text-left">{item.description}</p>
-        </div>
-        <span className="badge">
+          <span className="badge w-28">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
             <path
               fillRule="evenodd"
@@ -97,6 +96,8 @@ const GlowEffect = () => {
           </svg>
           <Link to={item.linkProject}>See project</Link>
         </span>
+        </div>
+
       </article>
       ))
     }
