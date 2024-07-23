@@ -9,9 +9,7 @@ function App() {
     <>
       <Header />
       <Main />
-      <hr className="blur-sm separator mt-20" />
       <About />
-      <hr className="blur-sm separator mt-20" />
       <Projects />
       
     </>
