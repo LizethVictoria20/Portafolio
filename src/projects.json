@@ -11,8 +11,16 @@
     "id": 2,
     "projectName": "Jojo's API",
     "description": "I developed a project that consumes the JoJo's API to create detailed information views for each character and a search feature to find specific characters.",
-    "technology": "React, Pure CSS",
+    "technology": "React, Pure CSS, Jojo's API",
     "image": "https://github.com/LizethVictoria20/Portafolio/blob/main/src/assets/Jojo's.png?raw=true",
     "linkProject": "https://jojo-information.vercel.app"
+  },
+  {
+    "id": 3,
+    "projectName": "Migrado Libre",
+    "description": "The project involved utilizing the Mercado Libre API to create a comprehensive application wit all subcategories, providing a detailed and organized structure for the various product categories.",
+    "technology": "React, Pure CSS, Mercado Libre API",
+    "image": "https://github.com/LizethVictoria20/TercerCursoCodingBootcampUTP2024-1/blob/main/React/migrado-libre/src/images/migrado%20libre.png?raw=true",
+    "linkProject": "https://migrado-libre-mocha.vercel.app/"
   }
 ]
