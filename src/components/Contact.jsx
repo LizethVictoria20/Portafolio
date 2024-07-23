@@ -1,13 +1,34 @@
 import '../styles/Contact.css';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
-    return (
-      
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs
+        .sendForm('service_kr945bc', 'template_5haimzw', form.current, {
+          publicKey: 'clu-stSmEq2woPtXB',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    };
+
+
+    return ( 
 <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8" id="contact">
   <div className="mx-auto max-w-2xl text-center">
     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact</h2>
   </div>
-  <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+  <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={sendEmail} ref={form}>
     <div className="grid gap-x-8 gap-y-6">
     <div className="sm:col-span-2">
         <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">Your name</label>
@@ -29,7 +50,7 @@ const Contact = () => {
       </div>
     </div>
     <div className="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#" className="rounded-md px-3.5 py-2.5 text-base font-semibold text-white mt-10 button-submit">Contact me!</a>
+        <button className="rounded-md px-3.5 py-2.5 text-base font-semibold text-white mt-10 button-submit" type='submit'>Contact me!</button>
     </div>
   </form>
 </div>
