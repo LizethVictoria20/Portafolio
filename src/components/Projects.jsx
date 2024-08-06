@@ -75,10 +75,10 @@ const GlowEffect = () => {
 
   return (
     <div className="mt-40 ">
-      <div className="absolute inset-x-0 top-full -z-10 transform-gpu overflow-hidden blur-3xl sm:top-160" aria-hidden="true">
+      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#e8acc5] to-[#a6a3da] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
       </div>
-            <h1 className="text-6xl font-bold">Projects</h1>
+      <h1 className="text-6xl font-bold">Projects</h1>
       <div className="container">
       {
         ProjectJSON.map((item) => (
@@ -105,6 +105,9 @@ const GlowEffect = () => {
         </article>
         ))
       }
+      </div>
+      <div className="absolute h-4/5 inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#e8acc5] to-[#a6a3da] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" ></div>
       </div>
     </div>
   );
