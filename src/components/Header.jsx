@@ -15,7 +15,8 @@ const Header = () => {
             </Link>
           </div>
           <div className="sm:flex sm:items-center sm:justify-end">
-            <Link to="/about" className="text-sm font-semibold leading-6">About</Link>
+            <Link to="/" className="text-sm font-semibold leading-6">Home</Link>
+            <Link to="/about" className="text-sm font-semibold leading-6 ml-6">About</Link>
             <Link to="/skills" className="text-sm font-semibold leading-6 ml-6">Skills</Link>
             <Link to="/projects" className="text-sm font-semibold leading-6 ml-6">Projects</Link>
             <Link to="/contact" className="text-sm font-semibold leading-6 ml-6">Contact</Link>

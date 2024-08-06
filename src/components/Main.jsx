@@ -1,4 +1,5 @@
 import '../styles/Main.css'
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -12,7 +13,7 @@ const Main = () => {
             <h5 className="text-6xl tracking-tight">Hey, I&apos;m Liz Victoria</h5>
             <h2 className="mt-6 mb-10 text-lg leading-8 sm:text-7xl font-bold">Junior Web Developer</h2>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a href="#contact" className="rounded-md px-3.5 py-2.5 text-base font-semibold text-white mt-10 button-main">Contact me!</a>
+              <Link to="/contact" className="rounded-md px-3.5 py-2.5 text-base font-semibold text-white mt-10 button-main">Contact me!</Link>
             </div>
           </div>
         </div>
