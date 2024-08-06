@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -10,11 +11,13 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }

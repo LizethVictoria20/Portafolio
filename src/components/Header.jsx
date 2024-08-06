@@ -14,6 +14,12 @@ const Header = () => {
               <img className="h-8" src={Logo} alt="Personal logo" />
             </Link>
           </div>
+          <div className="sm:flex sm:items-center sm:justify-end">
+            <Link to="/about" className="text-sm font-semibold leading-6">About</Link>
+            <Link to="/skills" className="text-sm font-semibold leading-6 ml-6">Skills</Link>
+            <Link to="/projects" className="text-sm font-semibold leading-6 ml-6">Projects</Link>
+            <Link to="/contact" className="text-sm font-semibold leading-6 ml-6">Contact</Link>
+            </div>
           <div className="max-sm:flex max-sm:flex-1 max-sm:justify-end max-md:flex max-md:flex-1 max-md:justify-end lg:flex lg:flex-1 lg:justify-end logo-network">
             <Link to="https://github.com/LizethVictoria20" className="text-sm font-semibold leading-6" target="_blanc">
               <img src={GitHub} alt="Logo Github" />
